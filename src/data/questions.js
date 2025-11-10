@@ -49,9 +49,9 @@ const questions = {
       answer: 2
     },
     {
-      question: "Apa nama universitas terbesar milik Muhammadiyah?",
-      options: ["UI", "UGM", "UMY", "UAD"],
-      answer: 2
+      question: "siapa pendiri IPM?",
+      options: ["AR Fachruddin", "Djarnawi hadikusumo", "syaifuddin zuhri", "ahmad dahlan"],
+      answer: 1
     }
   ],
 
@@ -62,8 +62,8 @@ const questions = {
       answer: 0
     },
     {
-      question: "Apa nama organisasi mahasiswa Muhammadiyah?",
-      options: ["PMII", "HMI", "IMM", "KAMMI"],
+      question: "semboyan ikatan pelajar muhammadiyah?",
+      options: ["taqwa, ilmu, amal", "cerdas, kreatif, mandiri", "belajar, berjuang, bertaqwa", "beriman, berilmu, berakhlak"],
       answer: 2
     },
     {
@@ -77,9 +77,9 @@ const questions = {
       answer: 0
     },
     {
-      question: "Apa bentuk amal usaha Muhammadiyah?",
-      options: ["Sekolah", "Rumah sakit", "Perguruan tinggi", "Semua benar"],
-      answer: 3
+      question: "di mana mukhtamar muhammadiyah ke 48 di selenggarakan?",
+      options: ["makassar", "solo", "yogyakarta", "bandung"],
+      answer: 1
     }
   ]
 };
