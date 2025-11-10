@@ -67,8 +67,8 @@ const dist = path.join(__dirname, "dist");
 if (require("fs").existsSync(dist)) {
   app.use(express.static(dist));
 
-  // ✅ Gunakan "*" (bukan "/*")
-  app.get("*", (req, res) => {
+  // ✅ Perbaikan untuk Express v5: gunakan regex route
+  app.get(/.*/, (req, res) => {
     res.sendFile(path.join(dist, "index.html"));
   });
 }
