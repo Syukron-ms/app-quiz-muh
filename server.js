@@ -66,7 +66,9 @@ app.delete("/api/results", async (req, res) => {
 const dist = path.join(__dirname, "dist");
 if (require("fs").existsSync(dist)) {
   app.use(express.static(dist));
-  app.get("*", (req, res) => {
+
+  // ✅ Perbaikan di sini (dulu: "*" -> sekarang: "/*")
+  app.get("/*", (req, res) => {
     res.sendFile(path.join(dist, "index.html"));
   });
 }
