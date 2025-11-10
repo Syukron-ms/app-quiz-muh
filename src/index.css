@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌈 Background animasi bergerak */
+.bg-animate {
+  background: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 50%, #ff2d95 100%);
+  background-size: 200% 200%;
+  animation: bgMove 8s ease-in-out infinite;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 💎 Glassmorphism card */
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1rem;
+}
+
+/* ✨ Neon border halus */
+.neon-border {
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  box-shadow:
+    0 6px 22px rgba(124, 58, 237, 0.06),
+    inset 0 0 20px rgba(14, 165, 233, 0.02);
+}
+
+/* 💡 Neon text glow */
+.neon-text {
+  text-shadow:
+    0 2px 10px rgba(124, 58, 237, 0.6),
+    0 0 20px rgba(14, 165, 233, 0.12);
+}
+
+/* 🪄 Animasi popup */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-popIn {
+  animation: popIn 0.3s ease-out;
+}
+
+/* 🌟 Fade in lembut */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    filter: brightness(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* 💫 Efek judul quiz responsif */
+.quiz-heading {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Ukuran font heading responsif */
+.quiz-heading {
+  font-size: 1.1rem; /* default untuk mobile */
+}
+
+@media (min-width: 480px) {
+  .quiz-heading {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .quiz-heading {
+    font-size: 1.6rem;
+  }
+}
