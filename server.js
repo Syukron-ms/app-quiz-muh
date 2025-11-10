@@ -67,8 +67,8 @@ const dist = path.join(__dirname, "dist");
 if (require("fs").existsSync(dist)) {
   app.use(express.static(dist));
 
-  // ✅ Perbaikan di sini (dulu: "*" -> sekarang: "/*")
-  app.get("/*", (req, res) => {
+  // ✅ Gunakan "*" (bukan "/*")
+  app.get("*", (req, res) => {
     res.sendFile(path.join(dist, "index.html"));
   });
 }
@@ -76,5 +76,4 @@ if (require("fs").existsSync(dist)) {
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`✅ Server running at: http://localhost:${PORT}`);
-  console.log(`🌐 Accessible in LAN at: http://YOUR-IP:${PORT}`);
 });
